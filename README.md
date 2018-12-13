@@ -4,26 +4,33 @@ Simple to use remote grading system
 *Only works on Linux, Mac, or Windows with linux environment enabled*
 
 
-IMPORTANT:
-~~~~~~~~~~
-The script handles pulling github repo so slightly edits the meta.sh actual script
+IMPORTANT
+~~~~~~~~~
+
+The script handles pulling github repo so slightly edits the meta.sh actual script. Whenever using any of the scripts, please do a "git pull" to make sure that scripts are up to date and lead to grading the student's submissions correctly.
 
 
-Prior requirements:
-~~~~~~~~~~~~~~~
+Prior requirements
+~~~~~~~~~~~~~~~~~~
+
 1. Install 'sshpass' on your personal laptop (could be quite daunting to install on Mac/Windows)
 
 2. Clone the CS314_grade repository at some location on a remote lab machine
 
 3. Edit config.cfg file according to your needs:
+
    a. username is your CS username
+
    b. machine is the CS machine of your preference (e.g. aquarius)
+
    c. gusername is your Github username
+
    d. remoteRelativePath is the path to the grading directory on the CS machine relative to home directory
 
 
-How to use:
-~~~~~~~~~~~
+How to use
+~~~~~~~~~~
+
 1. Put all the scripts in the same directory (grade.bash, getUploadZip.bash, cleanup.bash, config.cfg)
 
 2. Download the submissions.zip from canvas and put it in the same directory where the scripts are
@@ -46,8 +53,9 @@ Then perform step 3 again (possibly step 2 as well), after fixing whatever cause
 	bash ./cleanup.bash <AssignmentNumber>
 
 
-Issues:
-~~~~~~~
+Issues
+~~~~~~
+
 1. Do not know how the scripts will behave if you run it on an assignment that has already been graded
 
 2. Do not know how the script will behave if wrong github password is entered (Script will exit if wrong CS password is entered)
