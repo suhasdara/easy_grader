@@ -2,6 +2,8 @@
 
 source ./config.cfg
 
+machine=$(python chooseHost.py)
+
 read -sp "$username@$machine.cs.utexas.edu's password: " password
 echo
 read -sp "Github $gusername's password: " gpassword
